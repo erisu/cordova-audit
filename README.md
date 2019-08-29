@@ -1,21 +1,5 @@
 # Cordova Plugin Audit
 
-- [Cordova Plugin Audit](#cordova-plugin-audit)
-  - [What is the Cordova Plugin Audit](#what-is-the-cordova-plugin-audit)
-  - [How Do End-Users Use This Service in Cordova](#how-do-end-users-use-this-service-in-cordova)
-    - [Example Use Case - Plugin Add](#example-use-case---plugin-add)
-      - [Plugin Add Fail Example Output](#plugin-add-fail-example-output)
-      - [Plugin Add Pass Example Output](#plugin-add-pass-example-output)
-    - [Example Use Case - Platform Add](#example-use-case---platform-add)
-      - [Platform Add Fail Example Output](#platform-add-fail-example-output)
-      - [Platform Add Pass Example Output](#platform-add-pass-example-output)
-    - [Additional Use Case Notes](#additional-use-case-notes)
-  - [How Do End-Users Access Results Outside of Cordova](#how-do-end-users-access-results-outside-of-cordova)
-  - [What are the End-Users Benefits](#what-are-the-end-users-benefits)
-  - [What Might be End-Users Concerns](#what-might-be-end-users-concerns)
-  - [Overall Goal](#overall-goal)
-  - [Plugin Audit Technical Details](#plugin-audit-technical-details)
-
 ## What is the Cordova Plugin Audit
 
 Cordova Plugin Audit is a tool and service for testing, gathering, and providing useful information of any given plugin to the end-user.
@@ -49,7 +33,7 @@ CLI/Lib/Fetch will fetch and install `cordova-plugin-camera`. After the `plugin 
 - `cordova-android@6.0.0`
 - `cordova-plugin-camera@x.y.z` (the version is known after install)
 
-The audit results, if available, is returned to the end-user and displayed on the screen.
+CLI will display one of the following outcomes below:
 
 #### Plugin Add Fail Example Output
 
@@ -58,7 +42,7 @@ The audit results, if available, is returned to the end-user and displayed on th
 Usual Install Output
 ...
 
-audit has detected an issue with plugin: cordova-plugin-camera@x.y.z
+audit has detected an issue with the plugin: cordova-plugin-camera@x.y.z
   See Plugin Test Result @ https://....io/hash-code-to-test
 ```
 
@@ -89,7 +73,7 @@ CLI/Lib/Fetch will fetch and install `cordova-android`. After the `p add` step h
 - `cordova-plugin-camera@1.0.0`
 - `cordova-plugin-device@1.0.0`
 
-A collection of audit results, if available, is returned to the end-user and displayed on the screen.
+CLI will display one of the following outcomes below:
 
 #### Platform Add Fail Example Output
 
@@ -130,7 +114,7 @@ Outside of Cordova CLI, users can search for test result with the given test cas
 
 ## What are the End-Users Benefits
 
-The major benefit that an end-user recieves from this system is a warning about the newly installed plugin when one or more defects are detected.
+The major benefit that an end-user receives from this system is a warning about the newly installed plugin when one or more defects are detected.
 
 There are possibilities that the defects are within the functionality and is not detected within the audit system. The goal though is to try and identify where we can and report to the end-users to reduce time wasted in an attempt to use a bugged plugin.
 
@@ -150,7 +134,7 @@ There are possibilities that the defects are within the functionality and is not
 
   No, if there is another third-party service, users can configure the endpoint to point at that provider.
 
-  One thing to note for perspective third-party service providers, all API request and response structure are governed by Cordova. Cordova should have to conform to support multiple providers.
+  One thing to note for prospective third-party service providers, all API request and response structure are governed by Cordova. Cordova should have to conform to support multiple providers.
 
 - **Can users disable the audit?**
 
