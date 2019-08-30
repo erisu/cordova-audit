@@ -134,7 +134,7 @@ There are possibilities that the defects are within the functionality and is not
 
   No, if there is another third-party service, users can configure the endpoint to point at that provider.
 
-  One thing to note for prospective third-party service providers, all API request and response structure are governed by Cordova. Cordova should have to conform to support multiple providers.
+  One thing to note for prospective third-party service providers, all API request and response structure are governed by Cordova. Cordova should **not** have to conform to support multiple providers.
 
 - **Can users disable the audit?**
 
